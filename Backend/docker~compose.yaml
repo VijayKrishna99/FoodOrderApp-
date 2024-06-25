@@ -1,0 +1,22 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - food-order-network
+
+  backend:
+    image: food-order-backend-new
+    container_name: backend
+    depends_on:
+      - mongodb
+    ports:
+      - "8080:8080"
+    networks:
+      - food-order-network
+    environment:
+      - SPRING
