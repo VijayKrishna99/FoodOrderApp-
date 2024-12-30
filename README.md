@@ -1,2 +1,2 @@
 # FoodOrderApp-
-Replica of Food Ordering application Using React for Frontend and SpringBoot Backend
+Replica of Food Ordering application Using React for Frontend and NodeJS Backend
